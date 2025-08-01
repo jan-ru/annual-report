@@ -189,14 +189,17 @@ def get_table_coordinates(file_path: Path, table_name: str, header_depth: int | 
             nrows = end_row - start_row
 
             if header_depth is None:
-                header_depth = detect_header_depth(ws, start_col, end_col, start_row)
+               header_depth = detect_header_depth(ws, start_col, end_col, start_row)
+
+            header_depth = 1
 
             return {
                 "sheet_name": ws.title,
-                "header": list(range(header_depth)) if header_depth > 1 else 0,
+            #    "header": header_depth,
                 "usecols": usecols,
+                "start_row": start_row,
                 "nrows": nrows,
-                "header_depth": header_depth
+            #    "header_depth": header_depth
             }
 
     raise ValueError(f"Table '{table_name}' not found in '{file_path}'.")
@@ -234,12 +237,16 @@ def read_table_from_excel(file_path: Path, table_name: str) -> pd.DataFrame:
     """
     params = get_table_coordinates(file_path, table_name)
     
+    #print(f"Reading table '{table_name}' from sheet '{params['sheet_name']}' "
+    #      f"with header depth {params['header']} and usecols {params['usecols']} "
+    #      f"starting from row {params['start_row']} for {params['nrows']} rows.")
+
     df = pd.read_excel(
         file_path,
         sheet_name=params["sheet_name"],
-        header=params["header"],
         usecols=params["usecols"],
-        nrows=params["nrows"]
+        nrows=params["nrows"],
+        skiprows=params["start_row"]-1
     )
     
     return df
