@@ -50,7 +50,9 @@ dev = [
 ]
 
 [project.scripts]
-telco-report = "telco_modular_implementation:main"
+telco-report = "financial_reporting.cli.telco_report:main"
+validate-modules = "financial_reporting.cli.validator:main"
+verify-setup = "scripts.verify_setup:main"
 
 [project.urls]
 Homepage = "https://github.com/yourusername/financial-reporting-system"
@@ -72,13 +74,10 @@ path = "version.py"
 pattern = '__version__ = "(?P<version>[^"]+)"'
 
 [tool.hatch.build.targets.wheel]
-packages = [
-    "main_polars_pivot.py",
-    "modular_reporting_system.py",
-    "telco_modular_implementation.py",
-    "quick_module_validator.py",
-    "version.py",
-]
+packages = ["src/financial_reporting"]
+
+[tool.hatch.build.targets.wheel.sources]
+"src" = ""
 
 [tool.ruff]
 line-length = 100

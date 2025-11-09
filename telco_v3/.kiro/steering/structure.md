@@ -5,7 +5,16 @@
 ```
 .
 ├── .venv/                          # Python virtual environment
-├── _data/                          # Source data files
+├── src/                            # Source code package
+│   └── financial_reporting/        # Main package
+│       ├── core/                   # Core processing modules
+│       ├── reporting/              # Report generation
+│       └── cli/                    # Command-line tools
+├── scripts/                        # Utility scripts
+│   ├── verify_setup.py
+│   └── setup_test_env.sh
+├── data/                           # Data files
+│   ├── account_mapping.csv
 │   └── EBi - Amsterdam Overtoom.pdf
 ├── reports/                        # Generated reports
 │   └── modular/                    # Modular report output
@@ -19,13 +28,15 @@
 │   │   └── test_*.py               # Test scripts per module
 │   ├── telco_test_module.py        # Main test orchestrator
 │   └── README.md                   # Test documentation
-├── main_polars_pivot.py            # Core data processing engine
-├── modular_reporting_system.py     # Modular architecture framework
-├── telco_modular_implementation.py # Main CLI entry point
-├── quick_module_validator.py       # Fast module validation
-├── version.py                      # Version information (v0.2.0)
-├── account_mapping.csv             # Account categorization mapping
-└── requirements.txt                # Python dependencies
+├── version.py                      # Version information (v0.3.0)
+├── pyproject.toml                  # Project configuration
+├── uv.lock                         # Dependency lock file
+├── Makefile                        # Task automation
+│
+├── main_polars_pivot.py            # Legacy: Core processing (to be refactored)
+├── modular_reporting_system.py     # Legacy: Report system (to be refactored)
+├── telco_modular_implementation.py # Legacy: CLI (to be refactored)
+└── quick_module_validator.py       # Legacy: Validator (to be refactored)
 ```
 
 ## Key Components

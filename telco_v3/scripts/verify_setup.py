@@ -122,5 +122,10 @@ def main():
         return 1
 
 
-if __name__ == "__main__":
+def cli():
+    """CLI entry point"""
     sys.exit(main())
+
+
+if __name__ == "__main__":
+    cli()

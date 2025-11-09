@@ -1,7 +1,7 @@
 .PHONY: help verify install install-dev test test-all clean lint format run
 
 verify:
-	python verify_setup.py
+	python scripts/verify_setup.py
 
 help:
 	@echo "Financial Reporting System - Make Commands"
