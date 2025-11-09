@@ -1,0 +1,100 @@
+[project]
+name = "financial-reporting-system"
+version = "0.3.0"
+description = "Modular Financial Reporting System for Dutch GAAP compliance"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Financial Reporting System", email = "info@example.com" }
+]
+keywords = ["financial", "reporting", "dutch-gaap", "xaf", "accounting"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    # Core data processing
+    "polars>=1.32.0",
+    "pandas>=2.3.1",
+    "numpy>=2.0.2",
+    
+    # Reporting and visualization
+    "great-tables>=0.18.0",
+    "plotly>=6.2.0",
+    
+    # Development and testing
+    "jupyter>=1.1.1",
+    "jupyterlab>=4.4.5",
+    "ipykernel>=6.30.0",
+    "ipython>=8.18.1",
+    
+    # Utilities
+    "python-dateutil>=2.9.0",
+    "pytz>=2025.2",
+    "pyyaml>=6.0.2",
+    "requests>=2.32.4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+telco-report = "telco_modular_implementation:main"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/financial-reporting-system"
+Repository = "https://github.com/yourusername/financial-reporting-system"
+Issues = "https://github.com/yourusername/financial-reporting-system/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[tool.hatch.version]
+path = "version.py"
+pattern = '__version__ = "(?P<version>[^"]+)"'
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "main_polars_pivot.py",
+    "modular_reporting_system.py",
+    "telco_modular_implementation.py",
+    "quick_module_validator.py",
+    "version.py",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+ignore = ["E501"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
