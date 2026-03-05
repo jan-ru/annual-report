@@ -8,7 +8,7 @@ from pathlib import Path
 def fix_setup_module():
     """Fix the setup.py module to ensure global variables"""
     print(os.getcwd())
-    setup_file = Path("module_tests/report_modules/setup.py")
+    setup_file = Path("module_tests/report_modules/data_loader.py")
     
     if not setup_file.exists():
         print(f"❌ Setup file not found: {setup_file}")

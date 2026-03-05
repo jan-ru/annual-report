@@ -19,7 +19,7 @@ import os
 import shutil
 from datetime import datetime
 
-# Add the parent directory to path to import our modules
+# Ensure the project root is on sys.path so the installed package is importable
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 class TelcoModuleTester:
@@ -31,7 +31,7 @@ class TelcoModuleTester:
         
         # Available modules to test
         self.available_modules = {
-            'setup': 'Setup and data loading',
+            'data_loader': 'Setup and data loading',
             'executive_summary': 'Executive summary and highlights',
             'income_statement': 'Income statement display and analysis',
             'balance_sheet': 'Balance sheet display and analysis', 
@@ -47,14 +47,12 @@ class TelcoModuleTester:
         
         # Import and create sample data
         try:
-            from telco_modular_implementation import TelcoModularReportGenerator
-            
-            generator = TelcoModularReportGenerator("Telco B.V.", "2024") 
+            from financial_reporting.cli.telco_report import TelcoModularReportGenerator
+            from financial_reporting.reporting.modular_system import ModularReportOrchestrator
+
+            generator = TelcoModularReportGenerator("Telco B.V.", "2024")
             sample_data = generator.create_telco_sample_data()
-            
-            # Generate the full modular structure
-            from modular_reporting_system import ModularReportOrchestrator
-            
+
             orchestrator = ModularReportOrchestrator("Telco B.V.", "2024")
             qmd_file = orchestrator.generate_full_report(
                 sample_data['income_statement'],
@@ -153,7 +151,7 @@ def test_{module_name}_module():
     try:
         # First run setup to ensure data is loaded
         print("Loading setup module...")
-        exec(open('report_modules/setup.py').read())
+        exec(open('report_modules/data_loader.py').read())
         print("✅ Setup module loaded successfully")
         
         # Then run the specific module
@@ -205,7 +203,7 @@ jupyter: python3
         
 ```{{python}}
 # Load setup first
-exec(open('report_modules/setup.py').read())
+exec(open('report_modules/data_loader.py').read())
 ```
 
 ```{{python}}
@@ -324,7 +322,7 @@ exec(open('report_modules/{module_name}.py').read())
         
         print()
         print("Usage examples:")
-        print("  python telco_test_module.py --setup")
+        print("  python telco_test_module.py --data_loader")
         print("  python telco_test_module.py --income_statement --render")
         print("  python telco_test_module.py --all --render")
 
@@ -347,7 +345,7 @@ Examples:
     )
     
     # Module selection arguments
-    parser.add_argument('--setup', action='store_true', 
+    parser.add_argument('--data_loader', action='store_true',
                        help='Test setup and data loading module')
     parser.add_argument('--executive_summary', action='store_true',
                        help='Test executive summary module')

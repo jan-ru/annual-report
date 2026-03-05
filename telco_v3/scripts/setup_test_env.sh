@@ -62,7 +62,7 @@ You can also test modules manually:
 ```bash
 cd module_tests
 python -c "
-exec(open('report_modules/setup.py').read())
+exec(open('report_modules/data_loader.py').read())
 exec(open('report_modules/income_statement.py').read())
 "
 ```

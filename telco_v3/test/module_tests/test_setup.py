@@ -16,12 +16,12 @@ def test_setup_module():
     try:
         # First run setup to ensure data is loaded
         print("Loading setup module...")
-        exec(open('report_modules/setup.py').read())
+        exec(open('report_modules/data_loader.py').read())
         print("✅ Setup module loaded successfully")
         
         # Then run the specific module
         print(f"Loading setup module...")
-        exec(open('report_modules/setup.py').read())  
+        exec(open('report_modules/data_loader.py').read())  
         print(f"✅ setup module executed successfully")
         
         return True
