@@ -1,0 +1,145 @@
+<!-- voorblad1 -->
+<!-- voorblad2 -->
+
+\newpage
+
+# Balans per December 2023
+
+```{python}
+#| echo: false
+import sys
+import pandas as pd
+from openpyxl import load_workbook
+from openpyxl.utils.exceptions import InvalidFileException
+from great_tables import GT
+from pathlib import Path
+from my_excel_lib import table_exists, get_table_coordinates, read_table_from_excel 
+
+from great_tables.data import sp500
+
+
+# Define constants
+file_path = Path("_data") / "ar23.xlsx"
+fy = "2023"
+
+```
+
+temp
+
+```{python}
+#| echo: false
+
+# Define the start and end dates for the data range
+start_date = "2010-06-07"
+end_date = "2010-06-14"
+
+# Filter sp500 using Pandas to dates between `start_date` and `end_date`
+sp500_mini = sp500[(sp500["date"] >= start_date) & (sp500["date"] <= end_date)]
+
+# Create a display table based on the `sp500_mini` table data
+(
+    GT(sp500_mini)
+    .tab_header(title="S&P 500", subtitle=f"{start_date} to {end_date}")
+    .fmt_currency(columns=["open", "high", "low", "close"])
+    .fmt_date(columns="date", date_style="wd_m_day_year")
+    .fmt_number(columns="volume", compact=True)
+    .cols_hide(columns="adj_close")
+)
+```
+
+Balans - Activa
+
+```{python}
+#| echo: false
+
+wb = openpyxl.load_workbook(file_path, data_only=True)
+ws = wb.[fy]  # specify sheet: wb["Sheet1"]
+table_range = ws.tables["Activa"].ref  # e.g., 'A1:D10'
+
+if table_exists:
+
+# Read the table range into pandas
+df = pd.read_excel(file_path, sheet_name=ws.title, usecols=table_range, engine="openpyxl")
+
+wb = openpyxl.load_workbook(file_path, data_only=True)
+ws = wb.[fy]  # specify sheet: wb["Sheet1"]
+table_range = ws.tables["Activa"].ref  # e.g., 'A1:D10'
+
+#
+df = load_table(file_path,table_name)
+
+df = df.rename(columns={"Note": ""}) # Replace header "Note" with empty string
+
+#gt_table = (
+#    GT(df)
+#    .fmt_number(columns=["2022", "2023"], decimals=0, use_seps=True)
+#    .cols_align(columns=["2022", "2023"], align="right")
+#    .cols_align(columns=[""], align="center")
+#)
+
+gt_table
+
+```
+
+Balans - Passiva
+
+```{python}
+#| echo: false
+
+wb = openpyxl.load_workbook(file_path, data_only=True)
+ws = wb.[fy]  # specify sheet: wb["Sheet1"]
+table_range = ws.tables["Passiva"].ref  # e.g., 'A1:D10'
+
+df = pd.read_excel(file_path, sheet_name=fy, usecols="A:E", nrows=13)
+df = df.rename(columns={"Note": ""}) # Replace header "Note" with empty string
+
+#gt_table = (
+#    GT(df)
+#    .fmt_number(columns=["2022", "2023"], decimals=0, use_seps=True)
+#    .cols_align(columns=["2022", "2023"], align="right")
+#    .cols_align(columns=[""], align="center")
+#)
+
+gt_table
+
+```
+
+\newpage
+
+# Winst-en-verliesrekening over 2023
+
+|                                 |        |   2023  |         |  2022  |        |
+|---------------------------------|:------:|--------:|--------:|-------:|-------:|
+| **Netto-omzet**                 |**(9)** |         | 1.100   |        |      0 |
+| **Kosten**                      |        |         |         |        |        |
+| Personeelskosten                |  (10)  | 14.922  |         | 32.650 |        | 
+| Afschrijvingen                  |  (11)  |      0  |         |    871 |        |
+| Overige bedrijfskosten          |  (12)  |155.886  |         | 11.470 |        |
+|                                 |        |---------|         |--------|        |
+|                                 |        |         |170.807  |        | 44.991 |
+| **Bedrijfsresultaat**           |        |         |(169.707)|        |(44.991)|
+| Financiele baten en lasten      |  (13)  |      0  |         |        |        |
+| **Resultaat voor belastingen**  |        |      0  |         |        |        |
+| Belastingen                     |  (14)  |      0  |         |        |        |
+| Resultaat deelnemingen          |  (15)  |      0  |         |        |        |
+| **Resultaat na belastingen**    |        |     0  |         |        |        |  
+
+
+
+```{python}
+#| echo: false
+
+file_path = Path("_data") / "ar23.xlsx"
+df = pd.read_excel("_data/ar23.xlsx", sheet_name="2023", usecols="A:E", nrows=13)
+df = df.rename(columns={"Note": ""}) # Replace header "Note" with empty string
+
+gt_table = (
+    GT(df)
+    .fmt_number(columns=["2022", "2023"], decimals=0, use_seps=True)
+    .cols_align(columns=["2022", "2023"], align="right")
+    .cols_align(columns=[""], align="center")
+)
+
+gt_table
+
+```

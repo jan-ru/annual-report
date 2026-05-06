@@ -1,0 +1,55 @@
+---
+---
+
+\newpage
+
+# Grondslagen voor waardering en resultaatbepaling
+
+[Algemeen]{.underline}
+
+**Activiteiten**
+De activiteiten van Telco B.V. bestaan voornamelijk uit:
+- Het oprichten van-, het deelnemen in-, het zich financieel interesseren bij- en het beheer voeren over andere vennootschappen en ondernemingen;
+- Het verlenen van diensten op het gebied van management,-management consultancy en interimmanagement daaronder begrepen- alsmede op administratief, technisch, financieel, economisch of bestuurlijk gebied aan vennootschappen, andere personen en instellingen;
+- Het verkrijgen, vervreemden, beheren en exploiteren van roerende en onroerende goederen, het ter leen opnemen of ter leen verstrekken van gelden al dan niet onder hypothecair verband en het stellen van zekerheid voor nakoming van de schulden door een ander dan de vennootschap aangegaan;
+- Het beleggen van haar middelen in effecten, zoals aandelen en andere bewijzen van deelgerechtigdheid, en obligaties, alsmede in andere schuldvorderingen, onder welke naam en in welke vorm ook.
+- Het verzorgen van pensioenvoorzieningen, het sluiten van en het doen van uitkeringen op grond van stamrechtovereenkomsten, lijftrente-overeenkomsten of soortgelijke overeenkomsten ten behoeve van (gewezen) directieleden van (geliëerde) vennootschappen, hun echtgenoten (partners) en minderjarige (pleeg-) kinderen.
+
+**Vestigingsadres, rechtsvorm en inschrijfnummer handelsregister**
+Telco B.V. (geregistreerd onder KvK-nummer 31041608) is gevestigd Zocherlaan 36 te Bloemendaal.
+
+[Algemene grondslagen voor de opstelling van de jaarrekening]{.underline}
+
+De jaarrekening is opgesteld volgens de bepalingen van Titel 9 Boek 2 BW. Hierbij is gebruik gemaakt van de in artikel 2:396 lid 6 BW geboden mogelijkheid voor de waardering van activa en passiva en de bepaling van het resultaat de fiscale waarderingsgrondslagen te hanteren, zoals bedoeld in hoofdstuk II van de Wet op de vennootschapsbelasting 1969.
+De toepassing van de fiscale waarderingsgrondslag heeft op het moment van stelselwijziging met betrekking tot de posten 'Andere deelnemingen' en 'Pensioenverplichtingen' geleid tot een afwijking van de waardering volgens afdeling 6, titel 9, Boek 2 BW.
+
+De waardering van activa en passiva en de bepaling van het resultaat vinden plaats op basis van historische kosten, tenzij anders vermeld.
+Baten en lasten worden toegerekend aan het jaar waarop ze betrekking hebben. Winsten worden slechts opgenomen voor zover zij op balansdatum zijn gerealiseerd. Verplichtingen en mogelijke verliezen die hun oorsprong vinden voor het einde van het verslagjaar, worden in acht genomen indien zij voor het opmaken van de jaarrekening bekend zijn geworden.
+
+[Grondslagen voor de waardering van activa en passiva]{.underline}
+
+**Materiële vaste activa**
+
+De materiële vaste activa worden gewaardeerd op kostprijs, verminderd met de cumulatieve afschrijvingen en indien van toepassing met bijzondere waardeverminderingen. De afschrijvingen worden gebaseerd op de geschatte economische levensduur, tenzij fiscaal een wettelijk maximum afschrijvingspercentage van 20% wordt voorgeschreven, en worden berekend op basis van een vast percentage van de verkrijgingsprijs, rekening houdend met een eventuele residuwaarde. Er wordt afgeschreven vanaf het moment van ingebruikneming.
+
+**Vastgoedbeleggingen**
+
+Vastgoedbeleggingen zijn onroerende zaken die worden aangehouden om huuropbrengsten of
+waardestijgingen, of beide, te realiseren. Vastgoedbeleggingen, daaronder begrepen vastgoedbeleggingen in ontwikkeling, worden gewaardeerd op kostprijs, verminderd met cumulatieve afschrijvingen en indien van toepassing met bijzondere waardeverminderingen.
+Afschrijving vindt plaats tot 100% van de woz-waarde.
+
+**Financiële vaste activa**
+
+Deelnemingen waarop invloed van betekenis op het zakelijke en financiële beleid kan worden uitgeoefend, worden gewaardeerd tegen het saldo van de activa minus de verplichtingen op fiscale grondslag bepaald.
+Deelnemingen waarin deze invloed ontbreekt, worden opgenomen tegen verkrijgingsprijs,
+rekeninghoudend met een voorziening voor waardeverminderingen.
+De overige vorderingen worden gewaardeerd tegen de nominale waarde, onder aftrek van noodzakelijk geachte voorzieningen.
+
+**Vorderingen**
+
+De vorderingen worden gewaardeerd tegen de nominale waarde. Noodzakelijk geachte afwaarderingen voor het risico van oninbaarheid worden in mindering gebracht op de vorderingen. Deze afwaarderingen worden bepaald op basis van individuele beoordeling van de vorderingen.
+
+** Effecten **
+
+De effecten zijn gewaardeerd op basis van beurswaarde indien deze beschikbaar is.
+Is de beurswaarde niet beschikbaar dan zijn de effecten gewaardeerd tegen verkrijgingsprijs dan wel lagere marktwaarde.

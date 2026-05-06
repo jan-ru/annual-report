@@ -1,0 +1,51 @@
+project:
+  output-dir: _output
+
+toc: true
+number-sections: true
+  
+format:
+  pdf:
+    documentclass: article
+    toc-title: "Jaarrekening"
+    papersize: A4
+    geometry:
+      - top=30mm
+      - left=20mm
+    header-includes:
+    - \usepackage{fancyhdr}
+    - \pagestyle{fancy}
+    - \fancyhead[L]{Telco B.V. \newline te Amersfoort}
+    - \fancyhead[R]{concept \today}
+
+report:
+  title: "Telco B.V. te Amersfoort"
+  subtitle: "Rapport inzake jaarstukken 2023"
+  downloads: [pdf,docx]
+  search: true
+  repo-url: https://github.com/jan-ru/ar2023
+  author: 
+    - name: "Jan-Ru Muller"
+      orcid: 0000-0003-1689-0557
+      email: janru.muller@gmail.com
+      affiliations:
+      - name: Telco B.V.
+        address: Zocherlaan 36
+        city: Bloemendaal
+        country: The Netherlands
+        postal-code: 2061 DK
+
+  chapters:
+    - 1_Financials.qmd
+    - 2_Grondslagen.qmd
+    - 3_Toelichting.qmd
+
+  appendices:
+    - contracts.yml
+
+license: "CC BY"
+
+title: "Telco B.V. te Amersfoort"
+subtitle: "Rapport inzake jaarstukken 2023"
+date: today
+date-format: "DD/MM/YYYY"
