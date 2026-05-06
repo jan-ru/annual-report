@@ -1,0 +1,31 @@
+account_id,account_desc,Categorie,statement_type,account_type,Balance_Side,Level0,Level1,Sort1,Display_Order,In_Subtotal
+4000,Netto-omzet,Netto-omzet,income_statement,Revenue,Credit,Bedrijfsopbrengsten,Omzet,A,1,TRUE
+4100,Overige bedrijfsopbrengsten,Overige bedrijfsopbrengsten,income_statement,Revenue,Credit,Bedrijfsopbrengsten,Omzet,B,2,TRUE
+6000,Lonen en salarissen,Personeelskosten,income_statement,Expense,Debit,Bedrijfskosten,Personeelskosten,C,3,TRUE
+6100,Sociale lasten,Personeelskosten,income_statement,Expense,Debit,Bedrijfskosten,Personeelskosten,C,3,TRUE
+6200,Overige personeelskosten,Personeelskosten,income_statement,Expense,Debit,Bedrijfskosten,Personeelskosten,C,3,TRUE
+6400,Afschrijvingen materiële vaste activa,Afschrijvingen,income_statement,Expense,Debit,Bedrijfskosten,Afschrijvingen,D,4,TRUE
+6500,Kantoorkosten,Overige bedrijfskosten,income_statement,Expense,Debit,Bedrijfskosten,Overige kosten,E,5,TRUE
+6600,Verkoopkosten,Overige bedrijfskosten,income_statement,Expense,Debit,Bedrijfskosten,Overige kosten,E,5,TRUE
+6700,Algemene kosten,Overige bedrijfskosten,income_statement,Expense,Debit,Bedrijfskosten,Overige kosten,E,5,TRUE
+6800,Diverse baten/lasten,Overige bedrijfskosten,income_statement,Expense,Debit,Bedrijfskosten,Overige kosten,E,5,TRUE
+7000,Opbrengst effecten,Rentebaten,income_statement,Income,Credit,Financiële baten en lasten,Rentebaten,F,6,TRUE
+7100,Rentebaten,Rentebaten,income_statement,Income,Credit,Financiële baten en lasten,Rentebaten,F,6,TRUE
+7200,Rentelasten,Rentelasten,income_statement,Expense,Debit,Financiële baten en lasten,Rentelasten,G,7,TRUE
+7300,Waardeveranderingen effecten,Waardeveranderingen effecten,income_statement,Income,Credit,Financiële baten en lasten,Overige financiële resultaten,H,8,TRUE
+8000,Vennootschapsbelasting,Vennootschapsbelasting,income_statement,Expense,Debit,Belastingen en deelnemingen,Belastingen,I,9,TRUE
+8100,Resultaat deelnemingen,Resultaat deelnemingen,income_statement,Income,Credit,Belastingen en deelnemingen,Resultaat deelnemingen,J,10,TRUE
+1000,Materiële vaste activa,Materiële vaste activa,balance_sheet,Asset,Debit,Vaste activa,Materiële vaste activa,A,1,TRUE
+1200,Vastgoedbeleggingen,Vastgoedbeleggingen,balance_sheet,Asset,Debit,Vaste activa,Vastgoedbeleggingen,B,2,TRUE
+1300,Financiële vaste activa - deelnemingen,Financiële vaste activa,balance_sheet,Asset,Debit,Vaste activa,Financiële vaste activa,C,3,TRUE
+1400,Financiële vaste activa - effecten,Financiële vaste activa,balance_sheet,Asset,Debit,Vaste activa,Financiële vaste activa,C,3,TRUE
+1500,Financiële vaste activa - leningen,Financiële vaste activa,balance_sheet,Asset,Debit,Vaste activa,Financiële vaste activa,C,3,TRUE
+1600,Vorderingen,Vorderingen,balance_sheet,Asset,Debit,Vlottende activa,Vorderingen,D,4,TRUE
+1700,Effecten,Effecten,balance_sheet,Asset,Debit,Vlottende activa,Effecten,E,5,TRUE
+1800,Liquide middelen,Liquide middelen,balance_sheet,Asset,Debit,Vlottende activa,Liquide middelen,F,6,TRUE
+2000,Geplaatst kapitaal,Eigen vermogen,balance_sheet,Equity,Credit,Eigen vermogen,Eigen vermogen,G,7,TRUE
+2100,Overige reserves,Eigen vermogen,balance_sheet,Equity,Credit,Eigen vermogen,Eigen vermogen,G,7,TRUE
+2200,Resultaat boekjaar,Eigen vermogen,balance_sheet,Equity,Credit,Eigen vermogen,Eigen vermogen,G,7,TRUE
+2300,Voorzieningen,Voorzieningen,balance_sheet,Liability,Credit,Voorzieningen,Voorzieningen,H,8,TRUE
+2400,Langlopende schulden,Langlopende schulden,balance_sheet,Liability,Credit,Vreemd vermogen langlopend,Langlopende schulden,I,9,TRUE
+2500,Kortlopende schulden,Kortlopende schulden,balance_sheet,Liability,Credit,Vreemd vermogen kortlopend,Kortlopende schulden,J,10,TRUE

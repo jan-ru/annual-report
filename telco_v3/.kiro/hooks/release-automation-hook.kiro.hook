@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "name": "Release Automation",
+  "description": "Monitors version.py for changes. When a new version is prepared for release, automatically updates README.md, runs all tests, and commits to git when tests pass.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": []
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "The version.py file has been modified, indicating a new release is being prepared. Please perform the following steps in order:\n\n1. Read the new version from version.py to understand what version is being released\n2. Update the README.md file with relevant information about this version (update version numbers, add release notes if needed)\n3. Run all tests using the test framework:\n   - Run: python quick_module_validator.py for quick validation\n   - Run: cd test && python telco_test_module.py --all for comprehensive module tests\n   - Check that all tests pass successfully\n4. If and only if all tests pass:\n   - Stage the changes: git add version.py README.md and any other modified files\n   - Commit with message: \"Release version X.X.X\" (use actual version number)\n   - Inform the user that the release has been prepared and committed\n5. If any tests fail:\n   - Report which tests failed\n   - Do NOT commit anything\n   - Advise the user to fix the failing tests before proceeding with the release"
+  }
+}

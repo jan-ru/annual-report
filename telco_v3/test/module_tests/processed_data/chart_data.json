@@ -1,0 +1,26 @@
+{
+  "revenue_trend": {
+    "years": [
+      "2024",
+      "2023"
+    ],
+    "values": [
+      1100.0,
+      0.0
+    ]
+  },
+  "assets_composition": {
+    "categories": [
+      "Vastgoedbeleggingen",
+      "Financi\u00eble vaste activa",
+      "Vorderingen",
+      "Liquide middelen"
+    ],
+    "values": [
+      174222.0,
+      267607.0,
+      138091.0,
+      14653.0
+    ]
+  }
+}
